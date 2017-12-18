@@ -28,6 +28,9 @@ filetype plugin indent on    " required
 " show line numbers
 set number
 
+" enable autoindentation
+set autoindent
+
 " enable folding
 set foldmethod=indent
 set foldlevel=99
