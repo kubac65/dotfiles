@@ -13,11 +13,11 @@ Plugin 'gmarik/Vundle.vim'
 
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'tmhedberg/SimpylFold'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'preservim/nerdtree'
 Plugin 'tomasr/molokai'
+Plugin 'Valloric/YouCompleteMe'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -26,7 +26,7 @@ filetype plugin indent on    " required
 
 " Now this is where the config starts
 " show line numbers
-set number
+set number relativenumber
 
 " enable autoindentation
 set autoindent
@@ -40,6 +40,11 @@ syntax on
 set wildmenu
 set wildmode=longest,list,full
 
+" Disable line wrapping 
+set nowrap
+
+" Expand tabs to spaces
+set tabstop=2 shiftwidth=4 expandtab
 " Colorsheme
 colo molokai
 
@@ -49,3 +54,7 @@ let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+" NERDTree configuration
+let g:NERDTREEDirArrowExpandable = '~'
+let g:NERDTREEDirArrowCollapsible = '~'
